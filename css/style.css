@@ -1487,9 +1487,7 @@ li {
     opacity: 1;
 }
 
-.portfolio-card:hover .portfolio-link:nth-child(2) {
-    transition-delay: 0.1s;
-}
+/* Single icon now, no need for nth-child delay */
 
 .portfolio-link:hover {
     background-color: var(--primary-dark);
