@@ -66,18 +66,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Text animation for hero title
+    // Text animation for hero title - modified to preserve text format
     if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.innerHTML = '';
-        
-        for (let i = 0; i < text.length; i++) {
-            const span = document.createElement('span');
-            span.textContent = text[i];
-            span.style.animationDelay = `${i * 0.05}s`;
-            span.classList.add('animate-letter');
-            heroTitle.appendChild(span);
-        }
+        // Preserve the original HTML structure with proper formatting
+        // This ensures "Cloud & DevOps Engineering" displays correctly
+        const originalHTML = heroTitle.innerHTML;
+        heroTitle.innerHTML = originalHTML;
     }
     
     // Scroll progress bar
